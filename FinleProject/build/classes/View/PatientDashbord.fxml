@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="723.0" prefWidth="1500.0" style="-fx-background-color: #ddd;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PatientDashbordController">
+   <children>
+      <AnchorPane prefHeight="723.0" prefWidth="197.0" style="-fx-background-color: #002B48;">
+         <children>
+            <VBox layoutX="1.0" layoutY="275.0" spacing="30.0" />
+            <VBox layoutX="1.0" layoutY="275.0" prefHeight="194.0" prefWidth="210.0" spacing="40.0">
+               <children>
+                  <Button fx:id="ShowFreeApp" mnemonicParsing="false" onAction="#ShowFreeAppoitmentsBtn" prefHeight="40.0" prefWidth="210.0" style="-fx-background-color: #02457A;" text=" Free Appoitments" textFill="WHITE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bookedApp" mnemonicParsing="false" onAction="#ShowBookedAppoitmentsBtn" prefHeight="40.0" prefWidth="210.0" style="-fx-background-color: #02457A;" text=" Booked Appoitments" textFill="WHITE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="logout11" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#logoutBtn" prefHeight="40.0" prefWidth="210.0" style="-fx-background-color: #02457A;" text="Logout" textFill="WHITE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox layoutY="44.0" spacing="25.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="36.0" prefWidth="203.0" text="Welcome " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.44" />
+                     </effect>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="269.0" layoutY="40.0" prefHeight="642.0" prefWidth="1162.0" style="-fx-background-color: #fff; -fx-background-radius: 40px;">
+         <children>
+            <TableView fx:id="AppTable" layoutX="303.0" layoutY="79.0" prefHeight="295.0" prefWidth="748.0">
+              <columns>
+                <TableColumn fx:id="AppID" prefWidth="115.20001220703125" text="Appoitment-ID" />
+                <TableColumn fx:id="AppDay" prefWidth="164.79998779296875" text="Appoitment-Day" />
+                  <TableColumn fx:id="AppTime" prefWidth="138.75" text="Appoitment-Time" />
+                  <TableColumn fx:id="AppStatus" prefWidth="175.20001220703125" text="Appoitment-Status" />
+                  <TableColumn fx:id="AppDate" prefWidth="150.4000244140625" text="Appoitment-Date" />
+              </columns>
+            </TableView>
+            <Label alignment="CENTER" layoutX="57.0" layoutY="6.0" prefHeight="36.0" prefWidth="253.0" text="PatientDashbord" textFill="#002b48">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <effect>
+                  <Glow level="0.44" />
+               </effect>
+            </Label>
+            <TextArea fx:id="doctorCommecnt" layoutX="454.0" layoutY="391.0" prefHeight="200.0" prefWidth="445.0" promptText="Doctor Commecnt For Finshed Appoitment" />
+            <VBox layoutX="110.0" layoutY="133.0" spacing="40.0">
+               <children>
+                  <Button fx:id="FAppitments" mnemonicParsing="false" onAction="#FinshedAppitmentsBtn" prefHeight="35.0" prefWidth="158.0" stylesheets="@../Style/style.css" text="Finshed Appoitment" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="WAppoitment" mnemonicParsing="false" onAction="#WatingAppoitmentBtn" prefHeight="35.0" prefWidth="159.0" stylesheets="@../Style/style.css" text="Wating Appoitment" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="dcomShow" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#ShowDoctorCommecnt" prefHeight="35.0" prefWidth="159.0" stylesheets="@../Style/style.css" text="Doctor Commecnt" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Button fx:id="bookApp" layoutX="892.0" layoutY="24.0" mnemonicParsing="false" onAction="#BookAppBtn" prefHeight="35.0" prefWidth="158.0" stylesheets="@../Style/style.css" text="Book Appoitment" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

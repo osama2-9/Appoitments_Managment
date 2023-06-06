@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="750.0" minHeight="750.0" prefHeight="750.0" prefWidth="1600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminDashbordController">
+   <children>
+      <AnchorPane prefHeight="750.0" prefWidth="172.0" style="-fx-background-color: #097969;">
+         <children>
+            <VBox layoutX="1.0" layoutY="327.0" prefHeight="195.0" prefWidth="170.0" spacing="30.0">
+               <children>
+                  <Button fx:id="userMang" mnemonicParsing="false" onAction="#userMangBtn" prefHeight="45.0" prefWidth="170.0" style="-fx-background-color: #008080;" text="User Managment" textFill="WHITE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="appointments" mnemonicParsing="false" onAction="#appointmentsBtn" prefHeight="45.0" prefWidth="170.0" style="-fx-background-color: #008080;" text="Appointments" textFill="WHITE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="logout" mnemonicParsing="false" onAction="#logoutBtn" prefHeight="45.0" prefWidth="170.0" style="-fx-background-color: #008080;" text="Logout" textFill="WHITE">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="218.0" layoutY="20.0" prefHeight="36.0" prefWidth="448.0" text="AdminDashbord-UsersManagment" textFill="#097969">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <effect>
+            <Glow level="0.44" />
+         </effect>
+      </Label>
+      <TableView fx:id="PatientTabel" layoutX="376.0" layoutY="119.0" prefHeight="364.0" prefWidth="950.0">
+        <columns>
+          <TableColumn fx:id="idc" minWidth="44.0" prefWidth="44.0" text="ID" />
+          <TableColumn fx:id="usernamec" minWidth="90.4000244140625" prefWidth="96.79998779296875" text="Username" />
+            <TableColumn fx:id="Passwordc" minWidth="93.60003662109375" prefWidth="99.20001220703125" text="Password" />
+            <TableColumn fx:id="fnamec" minWidth="92.79998779296875" prefWidth="95.199951171875" text="Firstname" />
+            <TableColumn fx:id="lnamec" minWidth="55.2000732421875" prefWidth="117.60003662109375" text="Lastname" />
+            <TableColumn fx:id="agec" minWidth="24.0" prefWidth="63.20001220703125" text="Age" />
+            <TableColumn fx:id="emailc" minWidth="68.79998779296875" prefWidth="134.0" text="Email" />
+            <TableColumn fx:id="genderc" minWidth="0.0" prefWidth="0.0" text="Phone" />
+            <TableColumn fx:id="phonec" minWidth="59.199951171875" prefWidth="133.5999755859375" text="Phone" />
+            <TableColumn fx:id="genderc" minWidth="73.60009765625" prefWidth="83.2000732421875" text="Gender" />
+            <TableColumn fx:id="rolec" minWidth="89.5999755859375" text="Role" />
+        </columns>
+      </TableView>
+      <Button fx:id="update" layoutX="1049.0" layoutY="523.0" mnemonicParsing="false" onAction="#updateBtn" prefHeight="35.0" prefWidth="150.0" stylesheets="@../Style/style.css" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Button>
+      <Button fx:id="del" layoutX="769.0" layoutY="523.0" mnemonicParsing="false" onAction="#deleteBtn" prefHeight="35.0" prefWidth="150.0" stylesheets="@../Style/style.css" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Button>
+      <Button fx:id="addNew" layoutX="451.0" layoutY="523.0" mnemonicParsing="false" onAction="#addNewBtn" prefHeight="35.0" prefWidth="150.0" stylesheets="@../Style/style.css" text="Add New Patient+" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Button>
+      <Button fx:id="showall" layoutX="1175.0" layoutY="69.0" mnemonicParsing="false" onAction="#showallBtn" prefHeight="35.0" prefWidth="150.0" stylesheets="@../Style/style.css" text="ShowAllPaitent" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="fnameTXT" layoutX="724.0" layoutY="74.0" prefHeight="29.0" prefWidth="234.0" promptText="Search by firstname ..." />
+      <Button fx:id="search" layoutX="969.0" layoutY="72.0" mnemonicParsing="false" onAction="#searchBtn" prefHeight="28.0" prefWidth="80.0" stylesheets="@../Style/style.css" text="Search" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
